@@ -1,0 +1,8 @@
+﻿# Personal / temporary scripts
+gh-auth*.ps1
+deploy.ps1
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.swp

@@ -73,4 +73,101 @@
 <section class="relative bg-navy-900 text-paper py-16 overflow-hidden"><div class="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-ochre/15 blur-3xl"></div><div class="relative max-w-[720px] mx-auto px-6 lg:px-10 text-center"><h2 class="font-bold text-2xl sm:text-3xl tracking-tightest">Ready to talk specifics?</h2><p class="mt-3 text-navy-100">Every ABC mandate starts with a 30-minute partner-led call. No pitch.</p><a href="../contact.html" class="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-paper text-navy-900 font-semibold hover:bg-navy-50">Start a Conversation</a></div></section>
 </main>
 <footer class="bg-navy-950 text-navy-200"><div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row justify-between items-start gap-4"><p class="font-bold text-paper">ABC FRANCHISE</p><p class="text-xs">© 2026 ABC Franchise Pty Ltd · Member, Franchise Council of Australia</p></div></footer>
+<!-- ═══ MOBILE NAV (auto-generated from desktop ul) ═══ -->
+<script>
+(function(){
+  function init(){
+    var header=document.querySelector('header');
+    if(!header) return;
+    var nav=header.querySelector('nav');
+    if(!nav) return;
+    var desktopUl=nav.querySelector('ul');
+    if(!desktopUl) return;
+    var ctas=Array.prototype.filter.call(nav.children,function(el){return el.tagName==='A';});
+    var desktopCta=ctas[ctas.length-1];
+    if(desktopCta){desktopCta.classList.add('hidden','lg:inline-flex');}
+
+    var btn=document.createElement('button');
+    btn.id='mm-toggle';
+    btn.type='button';
+    btn.className='lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-navy-900 hover:bg-soft transition-colors';
+    btn.setAttribute('aria-label','Open menu');
+    btn.setAttribute('aria-expanded','false');
+    btn.innerHTML='<svg id="mm-hb" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg id="mm-cl" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    nav.appendChild(btn);
+
+    var panel=document.createElement('div');
+    panel.id='mm-panel';
+    panel.className='lg:hidden fixed inset-x-0 top-[72px] z-[45] bg-paper border-b border-line shadow-xl max-h-[calc(100vh-72px)] overflow-y-auto transition-all duration-200 opacity-0 invisible -translate-y-2';
+
+    var mList=document.createElement('ul');
+    mList.className='flex flex-col py-2';
+
+    var topLis=desktopUl.querySelectorAll(':scope > li');
+    topLis.forEach(function(li){
+      var link=li.querySelector(':scope > a');
+      if(!link) return;
+      var text='';
+      for(var i=0;i<link.childNodes.length;i++){
+        var node=link.childNodes[i];
+        if(node.nodeType===3) text+=node.textContent;
+      }
+      text=text.trim();
+      if(!text) text=(link.textContent||'').trim().split(/\s{2,}/)[0];
+      var href=link.getAttribute('href')||'#';
+      var item=document.createElement('li');
+      var a=document.createElement('a');
+      a.href=href;
+      a.className='block py-4 px-6 hover:bg-soft text-[17px] font-medium text-ink border-b border-line/50';
+      a.textContent=text;
+      item.appendChild(a);
+      mList.appendChild(item);
+    });
+    panel.appendChild(mList);
+
+    if(desktopCta){
+      var ctaWrap=document.createElement('div');
+      ctaWrap.className='p-6 bg-soft';
+      var ctaA=document.createElement('a');
+      ctaA.href=desktopCta.getAttribute('href')||'#';
+      ctaA.className='block text-center py-4 rounded-lg bg-navy-900 text-paper font-bold uppercase tracking-widest text-xs hover:bg-navy-800';
+      ctaA.textContent=(desktopCta.textContent||'').trim();
+      ctaWrap.appendChild(ctaA);
+      panel.appendChild(ctaWrap);
+    }
+
+    document.body.appendChild(panel);
+
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var hb=document.getElementById('mm-hb');
+      var cl=document.getElementById('mm-cl');
+      if(open){
+        panel.classList.remove('opacity-0','invisible','-translate-y-2');
+        hb.classList.add('hidden');
+        cl.classList.remove('hidden');
+        document.body.style.overflow='hidden';
+      } else {
+        panel.classList.add('opacity-0','invisible','-translate-y-2');
+        hb.classList.remove('hidden');
+        cl.classList.add('hidden');
+        document.body.style.overflow='';
+      }
+    }
+    btn.addEventListener('click',function(){
+      var isOpen=btn.getAttribute('aria-expanded')==='true';
+      setOpen(!isOpen);
+    });
+    panel.addEventListener('click',function(e){
+      if(e.target.closest('a')) setOpen(false);
+    });
+    // Close on resize to desktop
+    window.addEventListener('resize',function(){
+      if(window.innerWidth>=1024) setOpen(false);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
+  else{init();}
+})();
+</script>
 </body></html>

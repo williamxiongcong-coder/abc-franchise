@@ -92,27 +92,42 @@
       </div>
 
       <div class="lg:col-span-5">
-        <!-- Decorative card showing AU/NZ traction -->
-        <div class="bg-ningjiDark text-paper rounded-3xl p-8 shadow-cardHover">
-          <p class="text-xs font-bold uppercase tracking-widest" style="color:#A8D427">Live AU/NZ traction</p>
-          <h3 class="mt-2 font-bold text-2xl tracking-tightest">Already selling out, daily.</h3>
+        <!-- Real Eastwood storefront photo (with gradient fallback if image missing) -->
+        <div class="rounded-3xl overflow-hidden shadow-cardHover bg-ningjiDark">
+          <div class="aspect-[4/5] relative" style="background: linear-gradient(135deg, #A8D427 0%, #7BB832 100%);">
+            <img src="../assets/ningji/eastwood.jpg" alt="NingJi Eastwood storefront — Shop 3/160 Rowe St, Eastwood NSW" class="absolute inset-0 w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            <!-- Caption overlay -->
+            <div class="absolute bottom-0 left-0 right-0 p-5 text-paper" style="background:linear-gradient(180deg, transparent 0%, rgba(31,41,55,0.85) 100%);">
+              <p class="text-xs font-bold uppercase tracking-widest" style="color:#A8D427">Open now · 4.3★</p>
+              <p class="mt-1 font-bold text-lg">NingJi Eastwood</p>
+              <p class="text-xs text-paper/85 mt-0.5">Shop 3/160 Rowe St, NSW 2122</p>
+            </div>
+          </div>
+          <div class="p-7">
+            <p class="text-xs font-bold uppercase tracking-widest" style="color:#A8D427">Live AU/NZ traction</p>
+            <h3 class="mt-2 font-bold text-xl tracking-tightest text-paper">Already trading, every day.</h3>
 
-          <div class="mt-6 space-y-5">
-            <div class="border-l-2 pl-4" style="border-color:#A8D427">
-              <p class="font-bold text-sm">Sydney CBD · First store</p>
-              <p class="text-sm text-paper/80 mt-1">Three consecutive months · monthly revenue ~¥1M RMB · Chatswood, George St, Burwood under construction</p>
-            </div>
-            <div class="border-l-2 pl-4" style="border-color:#A8D427">
-              <p class="font-bold text-sm">Melbourne · First store</p>
-              <p class="text-sm text-paper/80 mt-1">2-week soft opening end of March 2026 · 600–1,000 cups/day · lines morning to night</p>
-            </div>
-            <div class="border-l-2 pl-4" style="border-color:#A8D427">
-              <p class="font-bold text-sm">Auckland · First store</p>
-              <p class="text-sm text-paper/80 mt-1">Single-day peak ¥30k+ RMB · second store location being selected</p>
-            </div>
-            <div class="border-l-2 pl-4" style="border-color:#A8D427">
-              <p class="font-bold text-sm">Brisbane / Canberra / Gold Coast</p>
-              <p class="text-sm text-paper/80 mt-1">Multiple sites under construction</p>
+            <div class="mt-5 space-y-4 text-paper">
+              <div class="border-l-2 pl-3.5" style="border-color:#A8D427">
+                <p class="font-bold text-sm">Sydney · Eastwood</p>
+                <p class="text-xs text-paper/80 mt-0.5">Shop 3/160 Rowe St · open till 10pm Fri–Sat · 4.3★ on 47 reviews · opposite Eastwood Woolworths centre</p>
+              </div>
+              <div class="border-l-2 pl-3.5" style="border-color:#A8D427">
+                <p class="font-bold text-sm">Sydney · CBD first store</p>
+                <p class="text-xs text-paper/80 mt-0.5">3 months · monthly revenue ~¥1M RMB · Chatswood, George St, Burwood under build</p>
+              </div>
+              <div class="border-l-2 pl-3.5" style="border-color:#A8D427">
+                <p class="font-bold text-sm">Melbourne · first store</p>
+                <p class="text-xs text-paper/80 mt-0.5">2-week soft launch end March 2026 · 600–1,000 cups/day · queues morning to night</p>
+              </div>
+              <div class="border-l-2 pl-3.5" style="border-color:#A8D427">
+                <p class="font-bold text-sm">Auckland NZ · first store</p>
+                <p class="text-xs text-paper/80 mt-0.5">Single-day peak ¥30k+ RMB · 2nd Auckland site being selected</p>
+              </div>
+              <div class="border-l-2 pl-3.5" style="border-color:#A8D427">
+                <p class="font-bold text-sm">Brisbane · Canberra · Gold Coast</p>
+                <p class="text-xs text-paper/80 mt-0.5">Multiple sites under construction · recruitment open</p>
+              </div>
             </div>
           </div>
         </div>
@@ -492,5 +507,102 @@
   </div>
 </footer>
 
+<!-- ═══ MOBILE NAV (auto-generated from desktop ul) ═══ -->
+<script>
+(function(){
+  function init(){
+    var header=document.querySelector('header');
+    if(!header) return;
+    var nav=header.querySelector('nav');
+    if(!nav) return;
+    var desktopUl=nav.querySelector('ul');
+    if(!desktopUl) return;
+    var ctas=Array.prototype.filter.call(nav.children,function(el){return el.tagName==='A';});
+    var desktopCta=ctas[ctas.length-1];
+    if(desktopCta){desktopCta.classList.add('hidden','lg:inline-flex');}
+
+    var btn=document.createElement('button');
+    btn.id='mm-toggle';
+    btn.type='button';
+    btn.className='lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-navy-900 hover:bg-soft transition-colors';
+    btn.setAttribute('aria-label','Open menu');
+    btn.setAttribute('aria-expanded','false');
+    btn.innerHTML='<svg id="mm-hb" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg id="mm-cl" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    nav.appendChild(btn);
+
+    var panel=document.createElement('div');
+    panel.id='mm-panel';
+    panel.className='lg:hidden fixed inset-x-0 top-[72px] z-[45] bg-paper border-b border-line shadow-xl max-h-[calc(100vh-72px)] overflow-y-auto transition-all duration-200 opacity-0 invisible -translate-y-2';
+
+    var mList=document.createElement('ul');
+    mList.className='flex flex-col py-2';
+
+    var topLis=desktopUl.querySelectorAll(':scope > li');
+    topLis.forEach(function(li){
+      var link=li.querySelector(':scope > a');
+      if(!link) return;
+      var text='';
+      for(var i=0;i<link.childNodes.length;i++){
+        var node=link.childNodes[i];
+        if(node.nodeType===3) text+=node.textContent;
+      }
+      text=text.trim();
+      if(!text) text=(link.textContent||'').trim().split(/\s{2,}/)[0];
+      var href=link.getAttribute('href')||'#';
+      var item=document.createElement('li');
+      var a=document.createElement('a');
+      a.href=href;
+      a.className='block py-4 px-6 hover:bg-soft text-[17px] font-medium text-ink border-b border-line/50';
+      a.textContent=text;
+      item.appendChild(a);
+      mList.appendChild(item);
+    });
+    panel.appendChild(mList);
+
+    if(desktopCta){
+      var ctaWrap=document.createElement('div');
+      ctaWrap.className='p-6 bg-soft';
+      var ctaA=document.createElement('a');
+      ctaA.href=desktopCta.getAttribute('href')||'#';
+      ctaA.className='block text-center py-4 rounded-lg bg-navy-900 text-paper font-bold uppercase tracking-widest text-xs hover:bg-navy-800';
+      ctaA.textContent=(desktopCta.textContent||'').trim();
+      ctaWrap.appendChild(ctaA);
+      panel.appendChild(ctaWrap);
+    }
+
+    document.body.appendChild(panel);
+
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var hb=document.getElementById('mm-hb');
+      var cl=document.getElementById('mm-cl');
+      if(open){
+        panel.classList.remove('opacity-0','invisible','-translate-y-2');
+        hb.classList.add('hidden');
+        cl.classList.remove('hidden');
+        document.body.style.overflow='hidden';
+      } else {
+        panel.classList.add('opacity-0','invisible','-translate-y-2');
+        hb.classList.remove('hidden');
+        cl.classList.add('hidden');
+        document.body.style.overflow='';
+      }
+    }
+    btn.addEventListener('click',function(){
+      var isOpen=btn.getAttribute('aria-expanded')==='true';
+      setOpen(!isOpen);
+    });
+    panel.addEventListener('click',function(e){
+      if(e.target.closest('a')) setOpen(false);
+    });
+    // Close on resize to desktop
+    window.addEventListener('resize',function(){
+      if(window.innerWidth>=1024) setOpen(false);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
+  else{init();}
+})();
+</script>
 </body>
 </html>

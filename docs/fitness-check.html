@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Franchise Fitness Check — ABC FRANCHISE</title>
+<meta name="description" content="A 5-minute diagnostic scoring your business across nine factors of franchise readiness. Instant result, personalised report, no credit card." />
+<link rel="canonical" href="https://williamxiongcong-coder.github.io/abc-franchise/fitness-check.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']},colors:{navy:{50:'#F2F4F8',100:'#E3E7EE',200:'#C1CAD8',300:'#92A1B9',400:'#5C7193',500:'#324B72',600:'#1F365A',700:'#152849',800:'#0E1F3D',900:'#0A1A37',950:'#06122A'},ink:'#0F1525',ink2:'#2A3140',mute:'#6B7589',line:'#E5E7EC',paper:'#FFFFFF',soft:'#F5F6F8',ochre:'#DD7B3C',ochre2:'#E89760'},letterSpacing:{tightest:'-0.04em'},boxShadow:{card:'0 1px 2px rgba(15,21,37,0.04),0 4px 12px rgba(15,21,37,0.06)',cardHover:'0 4px 12px rgba(15,21,37,0.06),0 12px 32px rgba(15,21,37,0.10)'}}}}</script>
+<style>
+  /* Radio buttons as clickable cards */
+  .opt-card { transition: all 0.15s ease; }
+  .opt-card input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+  .opt-card:hover { border-color: #DD7B3C; background: #FFF8F1; }
+  .opt-card.is-selected { border-color: #DD7B3C; background: #DD7B3C; color: #FFFFFF; }
+  .opt-card.is-selected .opt-label { color: #FFFFFF; }
+  .opt-card.is-selected .opt-desc { color: rgba(255,255,255,0.85); }
+  /* Score donut */
+  .donut { transform: rotate(-90deg); transform-origin: center; }
+  .donut circle { transition: stroke-dashoffset 1.4s cubic-bezier(0.22, 1, 0.36, 1); }
+  /* Factor bar animation */
+  .factor-bar-fill { transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+</style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-line">
+  <nav class="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="font-bold text-lg tracking-tightest text-navy-900">ABC FRANCHISE</a>
+    <ul class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <li><a class="hover:text-navy-700" href="index.html#services">Our Services</a></li>
+      <li><a class="hover:text-navy-700" href="index.html#industries">Industries</a></li>
+      <li><a class="hover:text-navy-700" href="case-studies/index.html">Case Studies</a></li>
+      <li><a class="hover:text-navy-700" href="franchises/index.html">Franchises</a></li>
+      <li><a class="hover:text-navy-700" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="inline-flex items-center text-[12px] font-bold uppercase tracking-widest px-5 py-3 rounded-lg bg-navy-900 text-paper hover:bg-navy-800 transition-colors">Start a Conversation</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="bg-navy-900 text-paper py-16 lg:py-20 relative overflow-hidden">
+  <div class="absolute -right-32 -top-32 w-[500px] h-[500px] rounded-full bg-ochre/20 blur-3xl"></div>
+  <div class="relative max-w-[900px] mx-auto px-6 lg:px-10">
+    <nav class="text-xs text-navy-200 mb-5"><a href="index.html" class="hover:text-paper">Home</a> · <span class="text-paper">Fitness Check</span></nav>
+    <p class="text-sm font-bold uppercase tracking-widest text-ochre2">A 5-minute diagnostic</p>
+    <h1 class="mt-3 font-bold text-3xl sm:text-4xl lg:text-6xl tracking-tightest leading-[1.05]">Franchise Fitness Check.</h1>
+    <p class="mt-5 text-lg lg:text-xl text-navy-100 leading-relaxed max-w-2xl">Fifteen questions across nine factors. Instant score, instant report. Built from twenty years of Australian franchising assessment.</p>
+    <div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-navy-200">
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-ochre2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Free &amp; confidential</span>
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-ochre2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>No email gate to see your score</span>
+      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-ochre2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Optional senior-partner callback</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ FORM -->
+<form id="fc-form" class="bg-soft py-12 lg:py-16" onsubmit="event.preventDefault(); calculateScore();">
+  <div class="max-w-[820px] mx-auto px-6 lg:px-10">
+
+    <!-- progress hint -->
+    <div class="mb-8 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">15 questions · 9 factors</p>
+      <p class="mt-2 text-sm text-mute">Pick the answer closest to your current reality — not the aspirational one.</p>
+    </div>
+
+    <!-- Questions container — JS generates -->
+    <div id="fc-questions" class="space-y-6"></div>
+
+    <!-- Submit -->
+    <div class="mt-12 text-center">
+      <button id="fc-submit" type="submit" disabled class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
+        Calculate My Score
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <p id="fc-pending" class="mt-3 text-xs text-mute">Answer all 15 questions to enable the button.</p>
+    </div>
+  </div>
+</form>
+
+<!-- RESULT (hidden until calculated) -->
+<section id="fc-result" class="hidden bg-paper py-14 lg:py-20 border-t border-line scroll-mt-20">
+  <div class="max-w-[1000px] mx-auto px-6 lg:px-10">
+
+    <div class="text-center mb-12">
+      <p class="text-sm font-bold uppercase tracking-widest text-ochre">Your result</p>
+      <h2 class="mt-2 font-bold text-3xl lg:text-5xl tracking-tightest">Here's where you stand.</h2>
+    </div>
+
+    <!-- Score donut + tier card -->
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+
+      <!-- LEFT: donut -->
+      <div class="lg:col-span-5">
+        <div class="relative w-64 h-64 mx-auto">
+          <svg class="donut w-full h-full" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" stroke="#E5E7EC" stroke-width="12" fill="none"/>
+            <circle id="fc-donut-fill" cx="60" cy="60" r="52" stroke="#DD7B3C" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+          </svg>
+          <div class="absolute inset-0 grid place-items-center text-center">
+            <div>
+              <p id="fc-score-num" class="font-bold text-6xl tracking-tightest text-navy-900 num">0</p>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">out of 100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: tier text -->
+      <div class="lg:col-span-7">
+        <p id="fc-tier-label" class="text-xs font-bold uppercase tracking-widest text-ochre"></p>
+        <h3 id="fc-tier-title" class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest"></h3>
+        <p id="fc-tier-desc" class="mt-4 text-ink2 leading-relaxed"></p>
+      </div>
+    </div>
+
+    <!-- 9 factor breakdown -->
+    <div class="mt-14 bg-soft border border-line rounded-2xl p-6 lg:p-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Factor breakdown</p>
+      <h3 class="mt-2 font-bold text-2xl tracking-tightest">Nine factors of franchise readiness.</h3>
+      <p class="mt-2 text-sm text-mute">Each factor scored on the same 0-100 scale.</p>
+
+      <div id="fc-factors" class="mt-8 space-y-5"></div>
+    </div>
+
+    <!-- 3 next steps -->
+    <div class="mt-10 bg-paper border border-line rounded-2xl p-6 lg:p-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Your three next steps</p>
+      <h3 class="mt-2 font-bold text-2xl tracking-tightest">Where we'd start if we worked together.</h3>
+      <ol id="fc-next-steps" class="mt-6 space-y-4"></ol>
+    </div>
+
+    <!-- Lead capture: email me the full PDF -->
+    <div class="mt-10 bg-navy-900 text-paper rounded-2xl p-6 lg:p-10 relative overflow-hidden">
+      <div class="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-ochre/20 blur-3xl"></div>
+      <div class="relative grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-ochre2">The full report</p>
+          <h3 class="mt-2 font-bold text-2xl tracking-tightest">Get the 12-page PDF version.</h3>
+          <p class="mt-3 text-navy-100 leading-relaxed text-sm">Benchmarks against networks at your stage, sector-specific risk callouts, our recommended sequence, and a 90-day priority list — sent to your inbox within 1 business hour.</p>
+        </div>
+        <form class="space-y-3" onsubmit="event.preventDefault(); document.getElementById('fc-lead-msg').classList.remove('hidden'); this.reset();">
+          <div>
+            <label for="fc-lead-name" class="text-xs uppercase tracking-widest font-semibold text-ochre2">Name</label>
+            <input id="fc-lead-name" required type="text" class="mt-1.5 w-full bg-white/5 border border-white/15 rounded-lg px-4 py-3 placeholder:text-navy-300 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm text-paper" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="fc-lead-email" class="text-xs uppercase tracking-widest font-semibold text-ochre2">Email</label>
+            <input id="fc-lead-email" required type="email" class="mt-1.5 w-full bg-white/5 border border-white/15 rounded-lg px-4 py-3 placeholder:text-navy-300 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm text-paper" placeholder="you@business.com.au" />
+          </div>
+          <button type="submit" class="w-full inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg bg-paper text-navy-900 font-semibold hover:bg-navy-50 text-sm">
+            Email Me the Full Report
+          </button>
+          <p id="fc-lead-msg" class="hidden text-xs text-ochre2">Thanks — your report is on the way. (Production form-handler integration pending.)</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom CTA: book a call -->
+    <div class="mt-10 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Or skip the PDF</p>
+      <h3 class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest">Speak with a senior partner.</h3>
+      <p class="mt-3 text-ink2 text-[15px] max-w-xl mx-auto">20-minute honest read on whether this score should change your plans for the next six months. No pitch, no follow-up cadence.</p>
+      <a href="contact.html" class="mt-6 inline-flex items-center gap-2 px-7 py-4 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800">
+        Book a Free Strategy Call
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="bg-soft py-14 border-t border-line">
+  <div class="max-w-[820px] mx-auto px-6 lg:px-10 prose prose-sm prose-headings:font-bold prose-headings:tracking-tightest">
+    <p class="text-xs font-bold uppercase tracking-widest text-ochre">Methodology</p>
+    <h2 class="mt-2 font-bold text-2xl tracking-tightest text-ink">How we score franchise readiness.</h2>
+    <p class="mt-3 text-ink2 leading-relaxed">The nine factors are drawn from twenty years of Australian franchise assessment work. Each factor is weighted by the prevalence with which it predicts year-two network failure, based on our own engagement data and Franchise Council of Australia industry reporting. Read the underlying framework in <a href="resources/criteria-for-franchisability.html" class="text-navy-800 underline">Criteria for Franchisability</a>.</p>
+    <p class="mt-3 text-ink2 leading-relaxed">This is a directional self-assessment, not a clinical audit. Two questions per factor cannot replace a structured feasibility study. Use the score to decide whether to go deeper — not as a green light to start franchising.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-navy-950 text-navy-200">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row justify-between items-start gap-4">
+    <div>
+      <p class="font-bold text-paper">ABC FRANCHISE</p>
+      <p class="text-xs mt-1">Sydney HQ · Level 28, 242 Pitt St NSW 2000</p>
+      <p class="text-xs">Also Melbourne · Brisbane · Hong Kong · Shanghai</p>
+    </div>
+    <p class="text-xs">© 2026 ABC Franchise Pty Ltd · Member, Franchise Council of Australia</p>
+  </div>
+</footer>
+
+<script>
+// ═════════ FITNESS CHECK DATA + LOGIC ═════════
+
+const QUESTIONS = [
+  // ── Concept Strength ──
+  { id: 'q1', factor: 'concept', text: 'How distinct is your brand from competitors in your category?',
+    options: [
+      { label: 'Very distinct', desc: 'Customers recognise us instantly; hard to copy', score: 5 },
+      { label: 'Distinct', desc: 'Clear positioning, but others could replicate it', score: 3 },
+      { label: 'Similar to others', desc: 'We compete mainly on execution', score: 1 },
+      { label: 'Commoditised', desc: 'Buyers don\'t differentiate us', score: 0 } ] },
+  // ── Unit Economics (2) ──
+  { id: 'q2', factor: 'economics', text: 'How many units do you currently operate profitably (excluding founder salary)?',
+    options: [
+      { label: '5+ units', desc: 'All independently profitable', score: 5 },
+      { label: '2–4 units', desc: 'All profitable', score: 4 },
+      { label: '1 profitable unit', desc: 'Single venue', score: 2 },
+      { label: 'None yet', desc: 'No fully profitable unit', score: 0 } ] },
+  { id: 'q3', factor: 'economics', text: 'After paying a manager, ~7% royalty and ~2% marketing fund, would a typical unit clear $80k+/year for an owner-operator?',
+    options: [
+      { label: 'Yes, demonstrated', desc: 'Real venues show this', score: 5 },
+      { label: 'Likely yes', desc: 'Based on solid modelling', score: 3 },
+      { label: 'Marginal', desc: 'Depends on assumptions', score: 1 },
+      { label: 'No / unsure', desc: 'Haven\'t modelled this', score: 0 } ] },
+  // ── Operational Replicability (2) ──
+  { id: 'q4', factor: 'replicability', text: 'Do you have written operations manuals / SOPs for every key process?',
+    options: [
+      { label: 'Comprehensive & current', desc: 'Every key process documented', score: 5 },
+      { label: 'Partial', desc: 'Major processes documented', score: 3 },
+      { label: 'Minimal', desc: 'Most knowledge in founder\'s head', score: 1 },
+      { label: 'None', desc: 'Nothing written down', score: 0 } ] },
+  { id: 'q5', factor: 'replicability', text: 'How long does it take to train a new manager to run a unit competently — without you?',
+    options: [
+      { label: '4–6 weeks', desc: 'Structured programme', score: 5 },
+      { label: '2–3 months', desc: 'Informal mentoring', score: 3 },
+      { label: '6+ months', desc: 'Founder must be involved', score: 1 },
+      { label: 'Not done yet', desc: 'Only founder can run it', score: 0 } ] },
+  // ── Market Demand ──
+  { id: 'q6', factor: 'demand', text: 'How would you describe customer demand in your category?',
+    options: [
+      { label: 'Growing market', desc: 'Structural tailwind', score: 5 },
+      { label: 'Stable & mature', desc: 'Predictable demand', score: 3 },
+      { label: 'Cyclical / trend', desc: 'Hot today, cold later', score: 1 },
+      { label: 'Declining', desc: 'Headwinds in our favour are absent', score: 0 } ] },
+  // ── Founder Readiness (2) ──
+  { id: 'q7', factor: 'founder', text: 'Are you willing to step out of daily operations to run a franchisor business?',
+    options: [
+      { label: 'Yes — looking forward', desc: 'Clear on the role shift', score: 5 },
+      { label: 'Yes with caveats', desc: 'Want to stay involved in big decisions', score: 3 },
+      { label: 'Reluctantly', desc: 'See the need but uncomfortable', score: 1 },
+      { label: 'No', desc: 'Want to keep running my own venues', score: 0 } ] },
+  { id: 'q8', factor: 'founder', text: 'Have you led a team of 10+ people through significant organisational change?',
+    options: [
+      { label: 'Yes, repeatedly', desc: 'Multiple successful transitions', score: 5 },
+      { label: 'Yes, once', desc: 'Successfully', score: 3 },
+      { label: 'Smaller scale only', desc: 'Team of fewer than 10', score: 1 },
+      { label: 'No', desc: 'Solo or very small team experience', score: 0 } ] },
+  // ── Capital Structure ──
+  { id: 'q9', factor: 'capital', text: 'Can you fund 12–24 months of franchisor operating costs (typically $300k–$800k) before franchise fee income covers them?',
+    options: [
+      { label: 'Yes, internally', desc: 'Cash on hand', score: 5 },
+      { label: 'Yes with external', desc: 'Investor or bank lined up', score: 4 },
+      { label: 'Partially', desc: 'Would phase carefully', score: 2 },
+      { label: 'No plan yet', desc: 'Haven\'t solved this', score: 0 } ] },
+  // ── Regulatory Fit (2) ──
+  { id: 'q10', factor: 'regulatory', text: 'How familiar are you with the Australian Franchising Code of Conduct?',
+    options: [
+      { label: 'Very familiar', desc: 'Read it, understand obligations', score: 5 },
+      { label: 'Some understanding', desc: 'Would need legal guidance', score: 3 },
+      { label: 'Aware it exists', desc: 'Haven\'t engaged with it', score: 1 },
+      { label: 'Not familiar', desc: 'First time hearing about it', score: 0 } ] },
+  { id: 'q11', factor: 'regulatory', text: 'Does your sector have additional regulatory layers (e.g., AHPRA, NQF, ASQA, state licensing)?',
+    options: [
+      { label: 'No extras', desc: 'Standard commercial requirements only', score: 5 },
+      { label: 'Yes, fully compliant', desc: 'Already meet them at venue level', score: 4 },
+      { label: 'Yes, complex', desc: 'Compliance is expensive / specialised', score: 2 },
+      { label: 'Yes, gaps exist', desc: 'Not fully compliant today', score: 0 } ] },
+  // ── Recruitment Engine (2) ──
+  { id: 'q12', factor: 'recruitment', text: 'Do you have inbound interest from people asking to "own a venue" or "join the brand"?',
+    options: [
+      { label: 'Consistently', desc: 'Multiple inquiries per month', score: 5 },
+      { label: 'Occasionally', desc: 'A few per year', score: 3 },
+      { label: 'Rarely', desc: 'Family / friends only', score: 1 },
+      { label: 'None', desc: 'No outside interest yet', score: 0 } ] },
+  { id: 'q13', factor: 'recruitment', text: 'How would you describe brand recognition in your local market?',
+    options: [
+      { label: 'Household name', desc: 'Strong in our geography', score: 5 },
+      { label: 'Solid', desc: 'Recognised by our target customer', score: 3 },
+      { label: 'Modest', desc: 'Existing customers know us', score: 1 },
+      { label: 'Minimal', desc: 'Brand-building still needed', score: 0 } ] },
+  // ── Field Support Capacity (2) ──
+  { id: 'q14', factor: 'support', text: 'Do you have someone besides the founder who could lead field support for franchisees?',
+    options: [
+      { label: 'Yes, capable', desc: 'Identified and ready', score: 5 },
+      { label: 'Yes, needs development', desc: 'Identified but green', score: 3 },
+      { label: 'Hiring needed', desc: 'Would need to recruit', score: 1 },
+      { label: 'No plan', desc: 'Haven\'t thought about it', score: 0 } ] },
+  { id: 'q15', factor: 'support', text: 'Do you have a documented plan for generating leads on behalf of franchisees (beyond your own customer marketing)?',
+    options: [
+      { label: 'Detailed plan', desc: 'With budget allocated', score: 5 },
+      { label: 'High-level plan', desc: 'Direction clear, detail pending', score: 3 },
+      { label: 'Word of mouth', desc: 'No structured lead engine', score: 1 },
+      { label: 'No plan', desc: 'Haven\'t thought about it', score: 0 } ] }
+];
+
+const FACTORS = {
+  concept:       { name: 'Concept Strength',           qs: ['q1'] },
+  economics:     { name: 'Unit Economics',             qs: ['q2','q3'] },
+  replicability: { name: 'Operational Replicability',  qs: ['q4','q5'] },
+  demand:        { name: 'Market Demand',              qs: ['q6'] },
+  founder:       { name: 'Founder Readiness',          qs: ['q7','q8'] },
+  capital:       { name: 'Capital Structure',          qs: ['q9'] },
+  regulatory:    { name: 'Regulatory Fit',             qs: ['q10','q11'] },
+  recruitment:   { name: 'Recruitment Engine',         qs: ['q12','q13'] },
+  support:       { name: 'Field Support Capacity',     qs: ['q14','q15'] }
+};
+
+const TIERS = [
+  { min: 85, max: 100, label: 'Franchise-Ready', color: '#2F855A', bg: '#F0FFF4',
+    title: 'Your business is ready to franchise.',
+    desc: 'The fundamentals are in place. The work from here is execution — disclosure documentation, recruitment process, field support build-out. We\'d typically start the four-stage process within 30 days.',
+    steps: [
+      'Engage a franchise lawyer to draft Disclosure Document and Franchise Agreement under the current Code.',
+      'Lock in your first three target territories with evidence-based site criteria.',
+      'Build the recruitment funnel before opening franchisee inquiries — first cohort sets the tone for years.'
+    ] },
+  { min: 65, max: 84, label: 'Foundation-Stage', color: '#D97706', bg: '#FFFBEB',
+    title: 'Strong fundamentals — 6 to 12 months of build before launch.',
+    desc: 'You have a real business with real economics. The gaps are operational scaffolding — documentation, training, the second-in-command, the lead engine. Closing these before launching saves you year-two pain.',
+    steps: [
+      'Commission a structured feasibility study to validate the unit-economics math at franchise margin.',
+      'Build the SOPs and training architecture that lets someone other than you run a unit.',
+      'Identify and bring on the field-support hire before signing your first franchisee.'
+    ] },
+  { min: 40, max: 64, label: 'Early-Stage', color: '#DD7B3C', bg: '#FFF8F1',
+    title: 'Promising concept — substantial gaps to close first.',
+    desc: 'There\'s a business here, but the readiness layers aren\'t there yet. Going to market now would likely produce year-two churn. Spend the next 12–18 months operating, documenting, and proving the model at 3–5 owned units before opening to franchisees.',
+    steps: [
+      'Get to at least three profitable owned units operating without daily founder presence.',
+      'Document every key operating process to the level a stranger could follow it.',
+      'Talk to a franchise consultant for a fitness gap analysis — not to sell you franchising, but to map what needs closing.'
+    ] },
+  { min: 0, max: 39, label: 'Concept-Only', color: '#C53030', bg: '#FFF5F5',
+    title: 'Franchising is not the right next step for you yet.',
+    desc: 'The honest answer: the business needs more operating evidence and structure before franchising is the appropriate growth path. This isn\'t a verdict — it\'s a sequence. Most successful franchisors took 5–10 years to reach Franchise-Ready.',
+    steps: [
+      'Focus on getting your first venue profitably running without you in it daily.',
+      'Capture every standard operating procedure as you go — this is the asset franchising will eventually monetise.',
+      'Revisit this assessment in 18–24 months once unit economics are proven.'
+    ] }
+];
+
+// ═════════ RENDER QUESTIONS ═════════
+const qContainer = document.getElementById('fc-questions');
+QUESTIONS.forEach((q, idx) => {
+  const card = document.createElement('div');
+  card.className = 'bg-paper border border-line rounded-2xl p-5 lg:p-7 shadow-card';
+  card.innerHTML = `
+    <div class="flex items-start gap-4 mb-5">
+      <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-navy-900 text-paper grid place-items-center font-bold text-sm">${idx + 1}</span>
+      <h3 class="font-bold text-lg leading-snug tracking-tightest pt-1">${q.text}</h3>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-3">
+      ${q.options.map((opt, oi) => `
+        <label class="opt-card relative block border-2 border-line rounded-xl p-4 cursor-pointer">
+          <input type="radio" name="${q.id}" value="${opt.score}" data-q="${q.id}" />
+          <p class="opt-label font-bold text-sm text-ink">${opt.label}</p>
+          <p class="opt-desc mt-1 text-xs text-mute leading-relaxed">${opt.desc}</p>
+        </label>
+      `).join('')}
+    </div>
+  `;
+  qContainer.appendChild(card);
+});
+
+// ═════════ INTERACTION ═════════
+const submitBtn = document.getElementById('fc-submit');
+const pendingMsg = document.getElementById('fc-pending');
+const totalQuestions = QUESTIONS.length;
+
+qContainer.addEventListener('change', (e) => {
+  if (e.target.type === 'radio') {
+    // visual selection: clear siblings, set this
+    const allInQ = qContainer.querySelectorAll(`input[name="${e.target.name}"]`);
+    allInQ.forEach(r => r.closest('.opt-card').classList.remove('is-selected'));
+    e.target.closest('.opt-card').classList.add('is-selected');
+    // check completion
+    const answered = qContainer.querySelectorAll('input[type=radio]:checked').length;
+    if (answered === totalQuestions) {
+      submitBtn.disabled = false;
+      pendingMsg.textContent = 'All 15 answered. Click to see your score.';
+    } else {
+      pendingMsg.textContent = `${totalQuestions - answered} question${totalQuestions - answered === 1 ? '' : 's'} remaining.`;
+    }
+  }
+});
+
+// ═════════ SCORE CALCULATION ═════════
+function calculateScore() {
+  const answers = {};
+  qContainer.querySelectorAll('input[type=radio]:checked').forEach(r => {
+    answers[r.dataset.q] = parseInt(r.value, 10);
+  });
+
+  // factor scores
+  const factorScores = {};
+  let totalRaw = 0, totalMax = 0;
+  for (const [key, f] of Object.entries(FACTORS)) {
+    const raw = f.qs.reduce((sum, qid) => sum + (answers[qid] || 0), 0);
+    const max = f.qs.length * 5;
+    factorScores[key] = { ...f, raw, max, pct: Math.round((raw / max) * 100) };
+    totalRaw += raw;
+    totalMax += max;
+  }
+  const overall = Math.round((totalRaw / totalMax) * 100);
+  const tier = TIERS.find(t => overall >= t.min && overall <= t.max);
+
+  renderResult(overall, factorScores, tier);
+}
+
+function renderResult(overall, factors, tier) {
+  // donut
+  const circumference = 2 * Math.PI * 52;
+  const offset = circumference * (1 - overall / 100);
+  document.getElementById('fc-donut-fill').setAttribute('stroke-dashoffset', offset);
+  document.getElementById('fc-donut-fill').setAttribute('stroke', tier.color);
+  // score num — animate count up
+  const scoreEl = document.getElementById('fc-score-num');
+  const start = performance.now(); const duration = 1200;
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    scoreEl.textContent = Math.round(overall * eased);
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  // tier text
+  document.getElementById('fc-tier-label').textContent = tier.label;
+  document.getElementById('fc-tier-label').style.color = tier.color;
+  document.getElementById('fc-tier-title').textContent = tier.title;
+  document.getElementById('fc-tier-desc').textContent = tier.desc;
+
+  // factor bars
+  const factorsContainer = document.getElementById('fc-factors');
+  factorsContainer.innerHTML = '';
+  Object.values(factors).forEach(f => {
+    const row = document.createElement('div');
+    row.innerHTML = `
+      <div class="flex items-baseline justify-between mb-1.5">
+        <p class="font-semibold text-sm text-ink">${f.name}</p>
+        <p class="text-sm font-bold tabular-nums" style="color:${getFactorColor(f.pct)}">${f.pct}<span class="text-xs text-mute font-normal">/100</span></p>
+      </div>
+      <div class="h-2 w-full bg-line rounded-full overflow-hidden">
+        <div class="factor-bar-fill h-full rounded-full" style="width:0%; background:${getFactorColor(f.pct)};"></div>
+      </div>
+    `;
+    factorsContainer.appendChild(row);
+    // animate after insertion
+    requestAnimationFrame(() => {
+      row.querySelector('.factor-bar-fill').style.width = f.pct + '%';
+    });
+  });
+
+  // next steps
+  const stepsContainer = document.getElementById('fc-next-steps');
+  stepsContainer.innerHTML = '';
+  tier.steps.forEach((step, i) => {
+    const li = document.createElement('li');
+    li.className = 'flex gap-4';
+    li.innerHTML = `
+      <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-soft border border-line text-sm font-bold grid place-items-center text-ink">${i + 1}</span>
+      <p class="text-ink2 leading-relaxed pt-1">${step}</p>
+    `;
+    stepsContainer.appendChild(li);
+  });
+
+  // show + scroll
+  const resultSection = document.getElementById('fc-result');
+  resultSection.classList.remove('hidden');
+  setTimeout(() => resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+}
+
+function getFactorColor(pct) {
+  if (pct >= 80) return '#2F855A';   // green
+  if (pct >= 60) return '#D97706';   // amber
+  if (pct >= 40) return '#DD7B3C';   // ochre
+  return '#C53030';                  // red
+}
+</script>
+
+</body>
+</html>

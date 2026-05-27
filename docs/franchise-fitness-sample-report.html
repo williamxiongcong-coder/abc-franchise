@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sample Fitness Report — ABC FRANCHISE</title>
+<meta name="description" content="A worked example of the ABC Franchise Fitness Report — what you'll receive after taking the 5-minute readiness diagnostic." />
+<link rel="canonical" href="https://williamxiongcong-coder.github.io/abc-franchise/franchise-fitness-sample-report.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']},colors:{navy:{50:'#F2F4F8',100:'#E3E7EE',200:'#C1CAD8',300:'#92A1B9',400:'#5C7193',500:'#324B72',600:'#1F365A',700:'#152849',800:'#0E1F3D',900:'#0A1A37',950:'#06122A'},ink:'#0F1525',ink2:'#2A3140',mute:'#6B7589',line:'#E5E7EC',paper:'#FFFFFF',soft:'#F5F6F8',ochre:'#DD7B3C',ochre2:'#E89760'},letterSpacing:{tightest:'-0.04em'},boxShadow:{card:'0 1px 2px rgba(15,21,37,0.04),0 4px 12px rgba(15,21,37,0.06)',cardHover:'0 4px 12px rgba(15,21,37,0.06),0 12px 32px rgba(15,21,37,0.10)'}}}}</script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-line">
+  <nav class="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="font-bold text-lg tracking-tightest text-navy-900">ABC FRANCHISE</a>
+    <ul class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <li><a class="hover:text-navy-700" href="index.html#services">Our Services</a></li>
+      <li><a class="hover:text-navy-700" href="index.html#industries">Industries</a></li>
+      <li><a class="hover:text-navy-700" href="case-studies/index.html">Case Studies</a></li>
+      <li><a class="hover:text-navy-700" href="franchises/index.html">Franchises</a></li>
+      <li><a class="hover:text-navy-700" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="inline-flex items-center text-[12px] font-bold uppercase tracking-widest px-5 py-3 rounded-lg bg-navy-900 text-paper hover:bg-navy-800 transition-colors">Start a Conversation</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- TOP BANNER -->
+<section class="bg-soft border-b border-line py-10">
+  <div class="max-w-[900px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Sample report · Foundation-stage example</p>
+      <h1 class="mt-1 font-bold text-2xl tracking-tightest">This is what you'll receive.</h1>
+    </div>
+    <a href="fitness-check.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800 text-sm">
+      Take Your Own Check
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- REPORT BODY (mocked as a single "page") -->
+<section class="bg-paper py-12 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-6 lg:px-10">
+
+    <!-- Report meta -->
+    <div class="flex flex-wrap justify-between items-baseline gap-3 pb-6 mb-10 border-b border-line">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-mute font-bold">ABC Franchise · Fitness Report</p>
+        <p class="mt-1 text-lg font-bold tracking-tightest">Prepared for: <span class="text-ochre">Specialty Cafe (sample)</span></p>
+      </div>
+      <p class="text-xs text-mute">Issued: 27 May 2026 · Report ID: SAMPLE-001</p>
+    </div>
+
+    <!-- Score donut + tier -->
+    <div class="grid lg:grid-cols-12 gap-10 items-center mb-14">
+      <div class="lg:col-span-5">
+        <div class="relative w-60 h-60 mx-auto">
+          <svg style="transform: rotate(-90deg); transform-origin: center;" class="w-full h-full" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" stroke="#E5E7EC" stroke-width="12" fill="none"/>
+            <!-- 72/100: dasharray 326.7, offset 326.7 * (1 - 0.72) = 91.48 -->
+            <circle cx="60" cy="60" r="52" stroke="#D97706" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="91.48"/>
+          </svg>
+          <div class="absolute inset-0 grid place-items-center text-center">
+            <div>
+              <p class="font-bold text-6xl tracking-tightest text-navy-900">72</p>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">out of 100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="text-xs font-bold uppercase tracking-widest" style="color:#D97706">Foundation-Stage</p>
+        <h2 class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest">Strong fundamentals — 6 to 12 months of build before launch.</h2>
+        <p class="mt-4 text-ink2 leading-relaxed">You have a real business with real economics. The gaps are operational scaffolding — documentation, training, the second-in-command, the lead engine. Closing these before launching saves you year-two pain.</p>
+      </div>
+    </div>
+
+    <!-- Factor breakdown -->
+    <div class="bg-soft border border-line rounded-2xl p-6 lg:p-10 mb-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Factor breakdown</p>
+      <h3 class="mt-2 font-bold text-2xl tracking-tightest">Nine factors of franchise readiness.</h3>
+
+      <div class="mt-8 space-y-5">
+        <!-- Concept Strength 80 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Concept Strength</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#2F855A">80<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:80%; background:#2F855A;"></div></div>
+        </div>
+        <!-- Unit Economics 80 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Unit Economics</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#2F855A">80<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:80%; background:#2F855A;"></div></div>
+        </div>
+        <!-- Operational Replicability 60 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Operational Replicability</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#D97706">60<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:60%; background:#D97706;"></div></div>
+        </div>
+        <!-- Market Demand 100 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Market Demand</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#2F855A">100<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:100%; background:#2F855A;"></div></div>
+        </div>
+        <!-- Founder Readiness 70 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Founder Readiness</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#D97706">70<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:70%; background:#D97706;"></div></div>
+        </div>
+        <!-- Capital Structure 60 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Capital Structure</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#D97706">60<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:60%; background:#D97706;"></div></div>
+        </div>
+        <!-- Regulatory Fit 80 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Regulatory Fit</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#2F855A">80<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:80%; background:#2F855A;"></div></div>
+        </div>
+        <!-- Recruitment Engine 50 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Recruitment Engine</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#DD7B3C">50<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:50%; background:#DD7B3C;"></div></div>
+        </div>
+        <!-- Field Support Capacity 40 -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <p class="font-semibold text-sm text-ink">Field Support Capacity</p>
+            <p class="text-sm font-bold tabular-nums" style="color:#DD7B3C">40<span class="text-xs text-mute font-normal">/100</span></p>
+          </div>
+          <div class="h-2 w-full bg-line rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:40%; background:#DD7B3C;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top 3 strengths / Top 3 risks (sample-only deeper analysis) -->
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+      <div class="rounded-2xl border border-line bg-paper p-6 lg:p-8">
+        <p class="text-xs font-bold uppercase tracking-widest" style="color:#2F855A">Three strengths</p>
+        <h3 class="mt-2 font-bold text-xl tracking-tightest">What's working.</h3>
+        <ul class="mt-4 space-y-3 text-sm text-ink2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-lg" style="color:#2F855A">●</span><span><span class="font-semibold text-ink">Market demand is structural.</span> Specialty cafe spend in Sydney is up 12% YoY; you're riding a tailwind not a fad.</span></li>
+          <li class="flex gap-3"><span class="text-lg" style="color:#2F855A">●</span><span><span class="font-semibold text-ink">Unit economics demonstrated.</span> Three profitable venues with documented owner P&amp;L clears the franchise-margin test.</span></li>
+          <li class="flex gap-3"><span class="text-lg" style="color:#2F855A">●</span><span><span class="font-semibold text-ink">Code-aware founder.</span> Familiarity with disclosure and cooling-off obligations gets the legal track to draft faster.</span></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-line bg-paper p-6 lg:p-8">
+        <p class="text-xs font-bold uppercase tracking-widest" style="color:#C53030">Three risks</p>
+        <h3 class="mt-2 font-bold text-xl tracking-tightest">What needs work.</h3>
+        <ul class="mt-4 space-y-3 text-sm text-ink2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-lg" style="color:#C53030">●</span><span><span class="font-semibold text-ink">No field-support hire.</span> The founder is the field-support team today; that ceiling is reached around venue 4.</span></li>
+          <li class="flex gap-3"><span class="text-lg" style="color:#C53030">●</span><span><span class="font-semibold text-ink">Recruitment engine is referral-only.</span> Will dry up around year two; needs paid acquisition or partnership channels.</span></li>
+          <li class="flex gap-3"><span class="text-lg" style="color:#C53030">●</span><span><span class="font-semibold text-ink">SOPs are partial.</span> Front-of-house documented; back-of-house and supply chain still founder-dependent.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Three next steps -->
+    <div class="bg-paper border border-line rounded-2xl p-6 lg:p-10 mb-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Your three next steps</p>
+      <h3 class="mt-2 font-bold text-2xl tracking-tightest">Where we'd start if we worked together.</h3>
+      <ol class="mt-6 space-y-4">
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-soft border border-line text-sm font-bold grid place-items-center text-ink">1</span>
+          <p class="text-ink2 leading-relaxed pt-1">Commission a structured feasibility study to validate unit-economics math at franchise margin (royalty + marketing fund + manager salary).</p>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-soft border border-line text-sm font-bold grid place-items-center text-ink">2</span>
+          <p class="text-ink2 leading-relaxed pt-1">Build the SOPs and training architecture that lets someone other than you run a unit end-to-end.</p>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-soft border border-line text-sm font-bold grid place-items-center text-ink">3</span>
+          <p class="text-ink2 leading-relaxed pt-1">Identify and bring on the field-support hire before signing your first franchisee — not after.</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 90-day priority list (sample-only deeper section) -->
+    <div class="bg-navy-900 text-paper rounded-2xl p-6 lg:p-10 mb-10 relative overflow-hidden">
+      <div class="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-ochre/20 blur-3xl"></div>
+      <div class="relative">
+        <p class="text-xs font-bold uppercase tracking-widest text-ochre2">90-day priority list</p>
+        <h3 class="mt-2 font-bold text-2xl tracking-tightest">What to do in the next quarter.</h3>
+        <div class="mt-6 grid sm:grid-cols-3 gap-5">
+          <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+            <p class="text-xs uppercase tracking-widest font-bold text-ochre2">Days 1–30</p>
+            <p class="mt-2 text-sm text-navy-100 leading-relaxed">Audit existing SOPs. Hire a documentation lead. Commission feasibility brief from a franchise consultant.</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+            <p class="text-xs uppercase tracking-widest font-bold text-ochre2">Days 31–60</p>
+            <p class="mt-2 text-sm text-navy-100 leading-relaxed">Complete operations manual draft. Identify second-in-command candidate. Validate unit-economics with two pilot territories.</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+            <p class="text-xs uppercase tracking-widest font-bold text-ochre2">Days 61–90</p>
+            <p class="mt-2 text-sm text-navy-100 leading-relaxed">Engage franchise lawyer for Disclosure draft. Map recruitment funnel. Decide go/no-go on franchise launch for following quarter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benchmark callout -->
+    <div class="bg-soft border border-line rounded-2xl p-6 lg:p-10 mb-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Benchmark</p>
+      <h3 class="mt-2 font-bold text-xl tracking-tightest">How you compare.</h3>
+      <p class="mt-3 text-ink2 leading-relaxed text-[15px]">Among Australian F&amp;B founders with 2–4 owned venues, the median Fitness Score is <span class="font-bold text-ink">63/100</span>. Your <span class="font-bold text-ink">72/100</span> places you in the top third of your stage cohort — but below the launch threshold (85+) where we typically recommend starting franchise sales activity.</p>
+    </div>
+
+    <!-- Closing CTA -->
+    <div class="text-center pt-4 border-t border-line">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">End of sample report</p>
+      <h2 class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest">Want your own?</h2>
+      <p class="mt-3 text-ink2 max-w-xl mx-auto">Five minutes. Fifteen questions. Same nine-factor analysis tailored to your business.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="fitness-check.html" class="inline-flex items-center gap-2 px-7 py-4 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800">
+          Take the Fitness Check
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-7 py-4 rounded-lg border border-line font-semibold hover:bg-soft">
+          Speak with a partner instead
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-navy-950 text-navy-200">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row justify-between items-start gap-4">
+    <div>
+      <p class="font-bold text-paper">ABC FRANCHISE</p>
+      <p class="text-xs mt-1">Sydney HQ · Level 28, 242 Pitt St NSW 2000</p>
+      <p class="text-xs">Also Melbourne · Brisbane · Hong Kong · Shanghai</p>
+    </div>
+    <p class="text-xs">© 2026 ABC Franchise Pty Ltd · Member, Franchise Council of Australia</p>
+  </div>
+</footer>
+
+</body>
+</html>

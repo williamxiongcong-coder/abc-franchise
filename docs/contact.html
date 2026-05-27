@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — ABC FRANCHISE</title>
+<meta name="description" content="Speak with a senior partner at ABC Franchise — Australia's boutique franchise consultancy. Offices in Sydney, Melbourne, Brisbane, Hong Kong and Shanghai." />
+<link rel="canonical" href="https://williamxiongcong-coder.github.io/abc-franchise/contact.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']},colors:{navy:{50:'#F2F4F8',100:'#E3E7EE',200:'#C1CAD8',300:'#92A1B9',400:'#5C7193',500:'#324B72',600:'#1F365A',700:'#152849',800:'#0E1F3D',900:'#0A1A37',950:'#06122A'},ink:'#0F1525',ink2:'#2A3140',mute:'#6B7589',line:'#E5E7EC',paper:'#FFFFFF',soft:'#F5F6F8',ochre:'#DD7B3C',ochre2:'#E89760'},letterSpacing:{tightest:'-0.04em'},boxShadow:{card:'0 1px 2px rgba(15,21,37,0.04),0 4px 12px rgba(15,21,37,0.06)',cardHover:'0 4px 12px rgba(15,21,37,0.06),0 12px 32px rgba(15,21,37,0.10)'}}}}</script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-line">
+  <nav class="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="font-bold text-lg tracking-tightest text-navy-900">ABC FRANCHISE</a>
+    <ul class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <li><a class="hover:text-navy-700" href="index.html#services">Our Services</a></li>
+      <li><a class="hover:text-navy-700" href="index.html#industries">Industries</a></li>
+      <li><a class="hover:text-navy-700" href="case-studies/index.html">Case Studies</a></li>
+      <li><a class="hover:text-navy-700" href="franchises/index.html">Franchises</a></li>
+    </ul>
+    <a href="contact.html" class="inline-flex items-center text-[12px] font-bold uppercase tracking-widest px-5 py-3 rounded-lg bg-navy-900 text-paper hover:bg-navy-800 transition-colors">Start a Conversation</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="bg-paper border-b border-line">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-10 pt-16 lg:pt-20 pb-12 lg:pb-16">
+    <nav class="text-xs text-mute mb-6"><a href="index.html">Home</a> · <span class="text-ink">Contact</span></nav>
+    <p class="text-sm font-bold uppercase tracking-widest text-ochre">Contact</p>
+    <h1 class="mt-3 font-bold text-3xl sm:text-4xl lg:text-6xl tracking-tightest leading-[1.05] max-w-3xl">It all starts with a conversation.</h1>
+    <p class="mt-6 text-lg lg:text-xl text-ink2 leading-relaxed max-w-2xl">Speak with a senior partner — not an associate, not a sales rep. We respond to every inquiry within one Australian business day.</p>
+  </div>
+</section>
+
+<!-- MAIN: FORM + SIDEBAR -->
+<section class="bg-soft py-12 lg:py-20 border-b border-line">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10">
+
+    <!-- LEFT: FORM (7 cols) -->
+    <div class="lg:col-span-7">
+      <div class="bg-paper border border-line rounded-2xl p-6 lg:p-10 shadow-card">
+        <p class="text-xs font-bold uppercase tracking-widest text-ochre">Inquiry form</p>
+        <h2 class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest">Tell us about your business.</h2>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">Fields marked <span class="text-ochre font-semibold">*</span> are required. Everything you send is treated under the Australian Privacy Act.</p>
+
+        <form class="mt-8 space-y-5" onsubmit="event.preventDefault(); alert('Thanks — your inquiry has been received. A senior partner will be in touch within one business day. (Note: production form-handler integration pending.)'); this.reset();">
+
+          <!-- Name row -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-first" class="text-sm font-semibold text-ink">First name <span class="text-ochre">*</span></label>
+              <input id="f-first" name="firstname" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+            </div>
+            <div>
+              <label for="f-last" class="text-sm font-semibold text-ink">Last name <span class="text-ochre">*</span></label>
+              <input id="f-last" name="lastname" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+            </div>
+          </div>
+
+          <!-- Email + Phone -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-email" class="text-sm font-semibold text-ink">Email <span class="text-ochre">*</span></label>
+              <input id="f-email" name="email" required type="email" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+            </div>
+            <div>
+              <label for="f-phone" class="text-sm font-semibold text-ink">Phone</label>
+              <input id="f-phone" name="phone" type="tel" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="04XX XXX XXX" />
+            </div>
+          </div>
+
+          <!-- Company / Brand -->
+          <div>
+            <label for="f-company" class="text-sm font-semibold text-ink">Company or brand name</label>
+            <input id="f-company" name="company" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="Optional — leave blank for individual inquiries" />
+          </div>
+
+          <!-- Country + State -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-country" class="text-sm font-semibold text-ink">Country <span class="text-ochre">*</span></label>
+              <select id="f-country" name="country" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Select…</option>
+                <option>Australia</option>
+                <option>New Zealand</option>
+                <option>Singapore</option>
+                <option>Hong Kong SAR</option>
+                <option>China</option>
+                <option>Malaysia</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-state" class="text-sm font-semibold text-ink">State <span class="text-mute font-normal">(if Australia)</span></label>
+              <select id="f-state" name="state" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">—</option>
+                <option>NSW</option><option>VIC</option><option>QLD</option>
+                <option>WA</option><option>SA</option><option>TAS</option>
+                <option>ACT</option><option>NT</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Inquiry Type -->
+          <div>
+            <label for="f-type" class="text-sm font-semibold text-ink">What can we help with? <span class="text-ochre">*</span></label>
+            <select id="f-type" name="inquirytype" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+              <option value="">Select an inquiry type…</option>
+              <option>Franchising my business — feasibility &amp; strategy</option>
+              <option>Franchising my business — legal &amp; documentation</option>
+              <option>Franchising my business — sales &amp; recruitment</option>
+              <option>Investing in a franchise — buyer inquiry</option>
+              <option>Cross-border expansion — into / out of Australia</option>
+              <option>Code-compliance audit — established network</option>
+              <option>Operations &amp; field-support review</option>
+              <option>Media or speaking inquiry</option>
+              <option>General — not sure yet</option>
+            </select>
+          </div>
+
+          <!-- Stage + Budget (optional qualifiers) -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-stage" class="text-sm font-semibold text-ink">Current business stage</label>
+              <select id="f-stage" name="stage" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Optional…</option>
+                <option>Single unit, profitable</option>
+                <option>2–3 units, owner-operated</option>
+                <option>3–10 units, structured</option>
+                <option>10+ units, established network</option>
+                <option>Pre-launch / concept stage</option>
+                <option>Not applicable (investor inquiry)</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-budget" class="text-sm font-semibold text-ink">Investment / engagement budget</label>
+              <select id="f-budget" name="budget" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Optional…</option>
+                <option>Under $50k engagement</option>
+                <option>$50k – $150k engagement</option>
+                <option>$150k – $400k engagement</option>
+                <option>$400k+ multi-phase</option>
+                <option>Franchise purchase (investor)</option>
+                <option>Not sure / need guidance</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- How did you hear -->
+          <div>
+            <label for="f-source" class="text-sm font-semibold text-ink">How did you find us?</label>
+            <select id="f-source" name="source" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+              <option value="">Optional…</option>
+              <option>Google search</option>
+              <option>LinkedIn</option>
+              <option>Referral from existing client</option>
+              <option>Franchise Council of Australia</option>
+              <option>Speaking engagement / event</option>
+              <option>Lumina Cafe / Vitaland / Lermont</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="f-message" class="text-sm font-semibold text-ink">Your message <span class="text-ochre">*</span></label>
+            <textarea id="f-message" name="message" required rows="5" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent resize-none text-sm" placeholder="Background, current situation, what you'd like to discuss, any specific questions or timeline…"></textarea>
+          </div>
+
+          <!-- Consent -->
+          <div class="flex items-start gap-3 pt-2">
+            <input id="f-consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+            <label for="f-consent" class="text-xs text-ink2 leading-relaxed">
+              I agree to ABC Franchise contacting me about my inquiry and keeping me informed by email, in accordance with the <a href="#" class="underline hover:text-navy-700">Privacy Policy</a>. <span class="text-ochre">*</span>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <div class="pt-4 flex flex-col sm:flex-row sm:items-center gap-4">
+            <button type="submit" class="inline-flex justify-center items-center gap-2 px-7 py-4 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800 transition-colors">
+              Send Inquiry
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <p class="text-xs text-mute">Or email <a href="mailto:admin@abcfranchise.com.au" class="underline hover:text-navy-700">admin@abcfranchise.com.au</a> directly.</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- RIGHT: QUICK CHANNELS (5 cols) -->
+    <aside class="lg:col-span-5 space-y-6">
+
+      <!-- Direct channels card -->
+      <div class="bg-paper border border-line rounded-2xl p-6 lg:p-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-ochre">Direct channels</p>
+        <h3 class="mt-2 font-bold text-xl tracking-tightest">Skip the form.</h3>
+
+        <ul class="mt-5 space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <span class="w-9 h-9 rounded-lg bg-navy-900 text-paper grid place-items-center flex-shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8M3 8a2 2 0 012-2h14a2 2 0 012 2"/></svg>
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">Email</p>
+              <a href="mailto:admin@abcfranchise.com.au" class="font-semibold text-ink hover:text-navy-700">admin@abcfranchise.com.au</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-9 h-9 rounded-lg bg-navy-900 text-paper grid place-items-center flex-shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72a2 2 0 011.72 2.05z"/></svg>
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">Phone</p>
+              <a href="tel:+61430597588" class="font-semibold text-ink hover:text-navy-700">0430 597 588</a>
+              <p class="text-xs text-mute mt-0.5">Mon–Fri · 9am–6pm AEST</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-9 h-9 rounded-lg bg-navy-900 text-paper grid place-items-center flex-shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">Sydney HQ</p>
+              <p class="font-semibold text-ink">Level 28, 242 Pitt Street</p>
+              <p class="text-sm text-ink2">Sydney NSW 2000 · Australia</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-9 h-9 rounded-lg bg-navy-900 text-paper grid place-items-center flex-shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </span>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-mute font-semibold">Response time</p>
+              <p class="text-ink2 text-[15px]">Senior partner reply within <span class="font-semibold text-ink">one business day</span>.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Fitness Check card -->
+      <div class="bg-navy-900 text-paper rounded-2xl p-6 lg:p-8 relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-ochre/20 blur-3xl"></div>
+        <div class="relative">
+          <p class="text-xs font-bold uppercase tracking-widest text-ochre2">Faster route</p>
+          <h3 class="mt-2 font-bold text-xl tracking-tightest">Take the 5-minute Franchise Fitness Check.</h3>
+          <p class="mt-3 text-sm text-navy-100 leading-relaxed">Nine questions. Instant readiness score against our <a href="resources/criteria-for-franchisability.html" class="underline text-paper">Criteria for Franchisability</a>. No email gate.</p>
+          <a href="index.html#fitness" class="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-paper text-navy-900 font-semibold text-sm hover:bg-navy-50">
+            Start the check
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- What happens next -->
+      <div class="bg-paper border border-line rounded-2xl p-6 lg:p-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-ochre">What happens next</p>
+        <ol class="mt-4 space-y-3 text-sm text-ink2">
+          <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-soft border border-line text-xs font-bold grid place-items-center flex-shrink-0 text-ink">1</span><span><span class="font-semibold text-ink">Triage.</span> A partner reads your inquiry and decides who's the right fit.</span></li>
+          <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-soft border border-line text-xs font-bold grid place-items-center flex-shrink-0 text-ink">2</span><span><span class="font-semibold text-ink">Email reply within 1 business day.</span> Confirming receipt and proposing a call.</span></li>
+          <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-soft border border-line text-xs font-bold grid place-items-center flex-shrink-0 text-ink">3</span><span><span class="font-semibold text-ink">20-minute discovery call.</span> No pitch, no fee. Honest assessment of fit.</span></li>
+          <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-soft border border-line text-xs font-bold grid place-items-center flex-shrink-0 text-ink">4</span><span><span class="font-semibold text-ink">If we're a fit,</span> we send a scoped proposal. If we're not, we'll tell you and suggest someone who is.</span></li>
+        </ol>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- 5-CITY OFFICES -->
+<section class="bg-paper py-14 border-b border-line">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-10">
+    <div class="text-center mb-10">
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Our offices</p>
+      <h2 class="mt-2 font-bold text-2xl lg:text-3xl tracking-tightest">Five cities, one boutique team.</h2>
+      <p class="mt-3 text-ink2 text-[15px] max-w-2xl mx-auto">WeWork-based across Australia, Hong Kong and Shanghai — partner-led, locally present.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      <div class="rounded-xl border border-line bg-soft p-5">
+        <p class="text-sm font-bold text-ink">Sydney</p>
+        <p class="text-xs text-ochre uppercase tracking-widest mt-1 font-semibold">HQ · Australia</p>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">Level 28<br/>242 Pitt Street<br/>Sydney NSW 2000</p>
+      </div>
+      <div class="rounded-xl border border-line bg-soft p-5">
+        <p class="text-sm font-bold text-ink">Melbourne</p>
+        <p class="text-xs text-mute uppercase tracking-widest mt-1 font-semibold">Australia</p>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">222 Exhibition Street<br/>Melbourne VIC 3000</p>
+      </div>
+      <div class="rounded-xl border border-line bg-soft p-5">
+        <p class="text-sm font-bold text-ink">Brisbane</p>
+        <p class="text-xs text-mute uppercase tracking-widest mt-1 font-semibold">Australia</p>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">310 Edward Street<br/>Brisbane City QLD 4000</p>
+      </div>
+      <div class="rounded-xl border border-line bg-soft p-5">
+        <p class="text-sm font-bold text-ink">Hong Kong</p>
+        <p class="text-xs text-mute uppercase tracking-widest mt-1 font-semibold">SAR</p>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">4/F, 9 Queen's Road Central<br/>Central, Hong Kong</p>
+      </div>
+      <div class="rounded-xl border border-line bg-soft p-5">
+        <p class="text-sm font-bold text-ink">Shanghai</p>
+        <p class="text-xs text-mute uppercase tracking-widest mt-1 font-semibold">China</p>
+        <p class="mt-3 text-sm text-ink2 leading-relaxed">696 Weihai Road<br/>Jing'an District<br/>Shanghai 200041</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="bg-soft py-10 border-b border-line">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-10 grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Member</p>
+      <p class="mt-1 text-sm font-semibold text-ink">Franchise Council of Australia</p>
+    </div>
+    <div>
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Specialised</p>
+      <p class="mt-1 text-sm font-semibold text-ink">Australian Franchising Code</p>
+    </div>
+    <div>
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Practice</p>
+      <p class="mt-1 text-sm font-semibold text-ink">Boutique · partner-led</p>
+    </div>
+    <div>
+      <p class="text-xs font-bold uppercase tracking-widest text-ochre">Privacy</p>
+      <p class="mt-1 text-sm font-semibold text-ink">Australian Privacy Act compliant</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-navy-950 text-navy-200">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row justify-between items-start gap-4">
+    <div>
+      <p class="font-bold text-paper">ABC FRANCHISE</p>
+      <p class="text-xs mt-1">Sydney HQ · Level 28, 242 Pitt St NSW 2000</p>
+      <p class="text-xs">Also Melbourne · Brisbane · Hong Kong · Shanghai</p>
+    </div>
+    <p class="text-xs">© 2026 ABC Franchise Pty Ltd · Member, Franchise Council of Australia</p>
+  </div>
+</footer>
+
+</body>
+</html>

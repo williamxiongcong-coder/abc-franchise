@@ -67,7 +67,7 @@
       <p class="text-sm text-ink2 leading-relaxed">Fields marked <span class="text-ochre font-semibold">*</span> are required. Your information is handled under the Australian Privacy Act and shared only with the franchisor of the brand you apply for.</p>
 
       <!-- LIVE FORM via FormSubmit.co — submissions delivered by email. To change the destination mailbox, edit the action URL. -->
-      <form id="franchise-application" class="mt-8 space-y-10" action="https://formsubmit.co/william.xiongcong@gmail.com" method="POST">
+      <form id="franchise-application" class="mt-8 space-y-10" action="https://formsubmit.co/1e9bb50e01560ad356d9e7545e8e0969" method="POST">
         <input type="hidden" name="_subject" value="New franchise application — ABC Franchise" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
@@ -150,16 +150,55 @@
                 <input id="a-postcode" name="postcode" required type="text" inputmode="numeric" pattern="[0-9]{4}" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
               </div>
             </div>
-            <div>
-              <label for="a-residency" class="text-sm font-semibold text-ink">Residency status <span class="text-ochre">*</span></label>
-              <select id="a-residency" name="residency" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
-                <option value="">Select…</option>
-                <option>Australian citizen</option>
-                <option>Permanent resident</option>
-                <option>Visa holder — with work rights</option>
-                <option>Overseas — investing from abroad</option>
-              </select>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-residency" class="text-sm font-semibold text-ink">Residency status <span class="text-ochre">*</span></label>
+                <select id="a-residency" name="residency" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Australian citizen</option>
+                  <option>Permanent resident</option>
+                  <option>Visa holder — with work rights</option>
+                  <option>Overseas — investing from abroad</option>
+                </select>
+              </div>
+              <div>
+                <label for="a-contactpref" class="text-sm font-semibold text-ink">Preferred contact method <span class="text-ochre">*</span></label>
+                <select id="a-contactpref" name="preferred_contact" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Mobile call</option>
+                  <option>Email</option>
+                  <option>Text message</option>
+                  <option>WhatsApp / WeChat</option>
+                </select>
+              </div>
             </div>
+
+            <!-- Second applicant (optional) -->
+            <details class="rounded-lg border border-line bg-soft/60 px-4 py-3">
+              <summary class="text-sm font-semibold text-ink cursor-pointer">Applying with a partner or spouse? Add a second applicant <span class="text-mute font-normal">(optional)</span></summary>
+              <div class="mt-4 space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="a2-first" class="text-sm font-semibold text-ink">Second applicant — first name</label>
+                    <input id="a2-first" name="applicant2_firstname" type="text" class="mt-2 w-full bg-paper border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+                  </div>
+                  <div>
+                    <label for="a2-last" class="text-sm font-semibold text-ink">Last name</label>
+                    <input id="a2-last" name="applicant2_lastname" type="text" class="mt-2 w-full bg-paper border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="a2-email" class="text-sm font-semibold text-ink">Email</label>
+                    <input id="a2-email" name="applicant2_email" type="email" class="mt-2 w-full bg-paper border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+                  </div>
+                  <div>
+                    <label for="a2-phone" class="text-sm font-semibold text-ink">Mobile</label>
+                    <input id="a2-phone" name="applicant2_phone" type="tel" class="mt-2 w-full bg-paper border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+                  </div>
+                </div>
+              </div>
+            </details>
           </div>
         </fieldset>
 
@@ -170,9 +209,19 @@
             <span class="font-bold text-xl tracking-tightest">Background &amp; experience</span>
           </legend>
           <div class="mt-6 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-occupation" class="text-sm font-semibold text-ink">Current occupation <span class="text-ochre">*</span></label>
+                <input id="a-occupation" name="occupation" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. Café owner, project manager…" />
+              </div>
+              <div>
+                <label for="a-employer" class="text-sm font-semibold text-ink">Current employer / business</label>
+                <input id="a-employer" name="employer" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="Company name, or self-employed" />
+              </div>
+            </div>
             <div>
-              <label for="a-occupation" class="text-sm font-semibold text-ink">Current occupation <span class="text-ochre">*</span></label>
-              <input id="a-occupation" name="occupation" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. Café owner, project manager, accountant…" />
+              <label for="a-education" class="text-sm font-semibold text-ink">Education / qualifications</label>
+              <input id="a-education" name="education" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. Bachelor of Commerce, Cert IV Hospitality… (optional)" />
             </div>
             <div>
               <label for="a-industry" class="text-sm font-semibold text-ink">Most relevant industry experience <span class="text-ochre">*</span></label>
@@ -238,6 +287,24 @@
                   <option>Investment partners</option>
                   <option>Combination</option>
                 </select>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-networth" class="text-sm font-semibold text-ink">Approximate net asset position <span class="text-ochre">*</span></label>
+                <select id="a-networth" name="net_assets" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Under $250k</option>
+                  <option>$250k – $500k</option>
+                  <option>$500k – $1M</option>
+                  <option>$1M – $2M</option>
+                  <option>$2M+</option>
+                  <option>Prefer to discuss</option>
+                </select>
+              </div>
+              <div>
+                <label for="a-borrow" class="text-sm font-semibold text-ink">Borrowing amount required <span class="text-mute font-normal">(if any)</span></label>
+                <input id="a-borrow" name="borrowing_amount" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. $150k, or leave blank" />
               </div>
             </div>
             <div>
@@ -308,20 +375,47 @@
             <span class="font-bold text-ochre">06</span>
             <span class="font-bold text-xl tracking-tightest">Declarations</span>
           </legend>
-          <div class="mt-6 space-y-4">
-            <div class="flex items-start gap-3">
-              <input id="a-accurate" name="declaration_accurate" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
-              <label for="a-accurate" class="text-xs text-ink2 leading-relaxed">I declare the information in this application is true and complete to the best of my knowledge. <span class="text-ochre">*</span></label>
+          <div class="mt-6 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <span class="text-sm font-semibold text-ink">Have you ever been convicted of a criminal offence? <span class="text-ochre">*</span></span>
+                <div class="mt-2 flex gap-4">
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="criminal_conviction" value="no" required class="text-ochre focus:ring-ochre" /> No</label>
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="criminal_conviction" value="yes" class="text-ochre focus:ring-ochre" /> Yes</label>
+                </div>
+              </div>
+              <div>
+                <span class="text-sm font-semibold text-ink">Have you ever been declared bankrupt? <span class="text-ochre">*</span></span>
+                <div class="mt-2 flex gap-4">
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="bankruptcy" value="no" required class="text-ochre focus:ring-ochre" /> No</label>
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="bankruptcy" value="yes" class="text-ochre focus:ring-ochre" /> Yes</label>
+                </div>
+              </div>
             </div>
-            <div class="flex items-start gap-3">
-              <input id="a-privacy" name="consent_privacy" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
-              <label for="a-privacy" class="text-xs text-ink2 leading-relaxed">I agree that ABC Franchise may collect and use my information to assess this application, and share it with the franchisor of the brand I apply for, in accordance with the <a href="#" class="underline hover:text-navy-700">Privacy Policy</a>. <span class="text-ochre">*</span></label>
+            <div>
+              <label for="a-declare-details" class="text-sm font-semibold text-ink">If yes to either, please provide brief details</label>
+              <input id="a-declare-details" name="declaration_details" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="Optional at this stage — discussed in confidence" />
             </div>
-            <div class="flex items-start gap-3">
-              <input id="a-updates" name="consent_marketing" type="checkbox" class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
-              <label for="a-updates" class="text-xs text-ink2 leading-relaxed">Keep me informed about other ABC Franchise opportunities by email. <span class="text-mute">(optional)</span></label>
+
+            <div class="space-y-4 pt-2 border-t border-line">
+              <div class="flex items-start gap-3 pt-4">
+                <input id="a-accurate" name="declaration_accurate" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+                <label for="a-accurate" class="text-xs text-ink2 leading-relaxed">I declare the information in this application is true and complete to the best of my knowledge, no relevant details have been omitted, and I will advise ABC Franchise of any material change in my circumstances before signing any franchise agreement. <span class="text-ochre">*</span></label>
+              </div>
+              <div class="flex items-start gap-3">
+                <input id="a-privacy" name="consent_privacy" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+                <label for="a-privacy" class="text-xs text-ink2 leading-relaxed">I agree that ABC Franchise may collect and use my information to assess this application, and share it with the franchisor of the brand I apply for and their professional advisers, in accordance with the <a href="#" class="underline hover:text-navy-700">Privacy Policy</a>. <span class="text-ochre">*</span></label>
+              </div>
+              <div class="flex items-start gap-3">
+                <input id="a-verify" name="consent_verification" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+                <label for="a-verify" class="text-xs text-ink2 leading-relaxed">I authorise ABC Franchise and the franchisor to verify the information I provide — including contacting referees I later supply and conducting lawful credit and background checks — and I acknowledge that providing false or misleading information may result in any resulting franchise agreement being terminated. <span class="text-ochre">*</span></label>
+              </div>
+              <div class="flex items-start gap-3">
+                <input id="a-updates" name="consent_marketing" type="checkbox" class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+                <label for="a-updates" class="text-xs text-ink2 leading-relaxed">Keep me informed about other ABC Franchise opportunities by email. <span class="text-mute">(optional)</span></label>
+              </div>
             </div>
-            <p class="text-xs text-mute leading-relaxed pt-2">Submitting this application is not an offer, and does not commit you or the franchisor to anything. Any grant of a franchise follows the disclosure and cooling-off process required by the Franchising Code of Conduct.</p>
+            <p class="text-xs text-mute leading-relaxed pt-2">Submitting this application is not an offer, and does not commit you or the franchisor to anything — the franchisor may decline any application at its discretion. Any grant of a franchise follows the disclosure and cooling-off process required by the Franchising Code of Conduct. Shortlisted applicants complete a comprehensive written application (detailed financial statement, references and witnessed signatures) at the disclosure stage.</p>
           </div>
         </fieldset>
 

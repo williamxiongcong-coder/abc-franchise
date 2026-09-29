@@ -66,8 +66,13 @@
 
       <p class="text-sm text-ink2 leading-relaxed">Fields marked <span class="text-ochre font-semibold">*</span> are required. Your information is handled under the Australian Privacy Act and shared only with the franchisor of the brand you apply for.</p>
 
-      <!-- INLINE FORM (to go live: replace onsubmit with your HubSpot/CRM endpoint — see note at bottom) -->
-      <form id="franchise-application" class="mt-8 space-y-10" onsubmit="event.preventDefault(); alert('Thank you — your application has been received. A senior partner will review it and be in touch within two business days. (Note: production form-handler integration pending.)'); this.reset();">
+      <!-- LIVE FORM via FormSubmit.co — submissions delivered by email. To change the destination mailbox, edit the action URL. -->
+      <form id="franchise-application" class="mt-8 space-y-10" action="https://formsubmit.co/william.xiongcong@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New franchise application — ABC Franchise" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://williamxiongcong-coder.github.io/abc-franchise/franchises/thank-you.html" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <!-- 01 THE OPPORTUNITY -->
         <fieldset>
@@ -332,11 +337,12 @@
       </form>
 
       <!--
-        TO GO LIVE WITH HUBSPOT / CRM:
-        Replace the onsubmit handler with a fetch() POST to your HubSpot form endpoint,
-        or swap the whole <form> for the HubSpot embed code.
-        The ?brand= and ?state= query params are read by the script below —
-        keep the same select IDs (a-brand, a-state) if you re-embed.
+        FORM DELIVERY — FormSubmit.co (free):
+        - Submissions are emailed to the address in the form's action URL.
+        - FIRST submission triggers a one-time activation email to that inbox — click "Activate" once.
+        - To change the destination mailbox later, replace the email in action="https://formsubmit.co/…".
+        - To upgrade to HubSpot/CRM later, swap this form for the HubSpot embed;
+          keep the select IDs (a-brand, a-state) so the ?brand= preselect script keeps working.
       -->
     </div>
   </div>

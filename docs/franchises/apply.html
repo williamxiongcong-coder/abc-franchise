@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Franchise Application — ABC FRANCHISE</title>
+<meta name="description" content="Formal franchise application for ABC Franchise partner brands — Lumina Cafe, Vitaland Kids Cafe, Bengong's Tea, NingJi, Uncle Joe's and Lermont. Confidential, no obligation." />
+<link rel="canonical" href="https://williamxiongcong-coder.github.io/abc-franchise/franchises/apply.html" />
+<meta name="robots" content="index,follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']},colors:{navy:{50:'#F2F4F8',100:'#E3E7EE',200:'#C1CAD8',300:'#92A1B9',400:'#5C7193',500:'#324B72',600:'#1F365A',700:'#152849',800:'#0E1F3D',900:'#0A1A37',950:'#06122A'},ink:'#0F1525',ink2:'#2A3140',mute:'#6B7589',line:'#E5E7EC',paper:'#FFFFFF',soft:'#F5F6F8',ochre:'#DD7B3C',ochre2:'#E89760'},letterSpacing:{tightest:'-0.04em'},boxShadow:{card:'0 1px 2px rgba(15,21,37,0.04),0 4px 12px rgba(15,21,37,0.06)',cardHover:'0 4px 12px rgba(15,21,37,0.06),0 12px 32px rgba(15,21,37,0.10)'}}}}</script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-line">
+  <nav class="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+    <a href="../index.html" class="font-bold text-lg tracking-tightest text-navy-900">ABC FRANCHISE</a>
+    <ul class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <li><a class="hover:text-navy-700" href="../index.html#services">Our Services</a></li>
+      <li><a class="hover:text-navy-700" href="../index.html#industries">Industries</a></li>
+      <li><a class="hover:text-navy-700" href="../case-studies/index.html">Case Studies</a></li>
+      <li><a class="hover:text-navy-700" href="index.html">Franchises</a></li>
+    </ul>
+    <a href="../contact.html" class="inline-flex items-center text-[12px] font-bold uppercase tracking-widest px-5 py-3 rounded-lg bg-navy-900 text-paper hover:bg-navy-800 transition-colors">Start a Conversation</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="bg-paper border-b border-line">
+  <div class="max-w-[900px] mx-auto px-6 lg:px-10 pt-16 lg:pt-20 pb-12 lg:pb-16">
+    <nav class="text-xs text-mute mb-6"><a href="../index.html">Home</a> · <a href="index.html">Franchises</a> · <span class="text-ink">Application</span></nav>
+    <p class="text-sm font-bold uppercase tracking-widest text-ochre">Franchise Application</p>
+    <h1 class="mt-3 font-bold text-3xl sm:text-4xl lg:text-6xl tracking-tightest leading-[1.05]">Your application, in ten minutes.</h1>
+    <p class="mt-6 text-lg lg:text-xl text-ink2 leading-relaxed max-w-2xl">This is the formal application for any ABC Franchise partner brand. It is confidential, carries no obligation, and is reviewed by a senior partner — not a sales team.</p>
+
+    <!-- What happens next -->
+    <ol class="mt-10 grid sm:grid-cols-3 gap-4">
+      <li class="rounded-xl bg-soft border border-line p-5">
+        <p class="font-bold text-2xl text-ochre">01</p>
+        <p class="mt-2 font-semibold text-sm">Partner review</p>
+        <p class="mt-1 text-xs text-mute leading-relaxed">We assess your application within two business days.</p>
+      </li>
+      <li class="rounded-xl bg-soft border border-line p-5">
+        <p class="font-bold text-2xl text-ochre">02</p>
+        <p class="mt-2 font-semibold text-sm">Introductory call</p>
+        <p class="mt-1 text-xs text-mute leading-relaxed">A 30-minute conversation about the brand, the territory and you.</p>
+      </li>
+      <li class="rounded-xl bg-soft border border-line p-5">
+        <p class="font-bold text-2xl text-ochre">03</p>
+        <p class="mt-2 font-semibold text-sm">Disclosure</p>
+        <p class="mt-1 text-xs text-mute leading-relaxed">Qualified applicants receive the Disclosure Document under the Franchising Code of Conduct.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="bg-soft py-12 lg:py-20 border-b border-line">
+  <div class="max-w-[900px] mx-auto px-6 lg:px-10">
+    <div class="bg-paper border border-line rounded-2xl p-6 lg:p-10 shadow-card">
+
+      <p class="text-sm text-ink2 leading-relaxed">Fields marked <span class="text-ochre font-semibold">*</span> are required. Your information is handled under the Australian Privacy Act and shared only with the franchisor of the brand you apply for.</p>
+
+      <!-- INLINE FORM (to go live: replace onsubmit with your HubSpot/CRM endpoint — see note at bottom) -->
+      <form id="franchise-application" class="mt-8 space-y-10" onsubmit="event.preventDefault(); alert('Thank you — your application has been received. A senior partner will review it and be in touch within two business days. (Note: production form-handler integration pending.)'); this.reset();">
+
+        <!-- 01 THE OPPORTUNITY -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">01</span>
+            <span class="font-bold text-xl tracking-tightest">The opportunity</span>
+          </legend>
+          <div class="mt-6 space-y-5">
+            <div>
+              <label for="a-brand" class="text-sm font-semibold text-ink">Which brand are you applying for? <span class="text-ochre">*</span></label>
+              <select id="a-brand" name="brand" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Select a brand…</option>
+                <option value="lumina-cafe">Lumina Cafe — coffee &amp; brunch</option>
+                <option value="vitaland-kids-cafe">Vitaland Kids Cafe — family play cafe</option>
+                <option value="bengong-tea">Bengong's Tea 本宫的茶 — tea &amp; dessert</option>
+                <option value="ningji">NingJi 柠季 — fresh lemon tea</option>
+                <option value="uncle-joes">Uncle Joe's Malaysian Kitchen — QSR</option>
+                <option value="lermont">Lermont — medical aesthetics (investor track)</option>
+                <option value="undecided">Not sure yet — advise me</option>
+              </select>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-state" class="text-sm font-semibold text-ink">Preferred state / territory <span class="text-ochre">*</span></label>
+                <select id="a-state" name="state" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>NSW</option><option>VIC</option><option>QLD</option>
+                  <option>WA</option><option>SA</option><option>TAS</option>
+                  <option>ACT</option><option>NT</option>
+                  <option>Outside Australia</option>
+                </select>
+              </div>
+              <div>
+                <label for="a-area" class="text-sm font-semibold text-ink">Preferred suburb or area</label>
+                <input id="a-area" name="area" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. Chatswood, Inner West, Perth CBD…" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 02 PERSONAL DETAILS -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">02</span>
+            <span class="font-bold text-xl tracking-tightest">Personal details</span>
+          </legend>
+          <div class="mt-6 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-first" class="text-sm font-semibold text-ink">First name <span class="text-ochre">*</span></label>
+                <input id="a-first" name="firstname" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+              </div>
+              <div>
+                <label for="a-last" class="text-sm font-semibold text-ink">Last name <span class="text-ochre">*</span></label>
+                <input id="a-last" name="lastname" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-email" class="text-sm font-semibold text-ink">Email <span class="text-ochre">*</span></label>
+                <input id="a-email" name="email" required type="email" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+              </div>
+              <div>
+                <label for="a-phone" class="text-sm font-semibold text-ink">Mobile <span class="text-ochre">*</span></label>
+                <input id="a-phone" name="phone" required type="tel" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="04XX XXX XXX" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="sm:col-span-2">
+                <label for="a-suburb" class="text-sm font-semibold text-ink">Suburb of residence <span class="text-ochre">*</span></label>
+                <input id="a-suburb" name="suburb" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+              </div>
+              <div>
+                <label for="a-postcode" class="text-sm font-semibold text-ink">Postcode <span class="text-ochre">*</span></label>
+                <input id="a-postcode" name="postcode" required type="text" inputmode="numeric" pattern="[0-9]{4}" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" />
+              </div>
+            </div>
+            <div>
+              <label for="a-residency" class="text-sm font-semibold text-ink">Residency status <span class="text-ochre">*</span></label>
+              <select id="a-residency" name="residency" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Select…</option>
+                <option>Australian citizen</option>
+                <option>Permanent resident</option>
+                <option>Visa holder — with work rights</option>
+                <option>Overseas — investing from abroad</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 03 BACKGROUND & EXPERIENCE -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">03</span>
+            <span class="font-bold text-xl tracking-tightest">Background &amp; experience</span>
+          </legend>
+          <div class="mt-6 space-y-5">
+            <div>
+              <label for="a-occupation" class="text-sm font-semibold text-ink">Current occupation <span class="text-ochre">*</span></label>
+              <input id="a-occupation" name="occupation" required type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="e.g. Café owner, project manager, accountant…" />
+            </div>
+            <div>
+              <label for="a-industry" class="text-sm font-semibold text-ink">Most relevant industry experience <span class="text-ochre">*</span></label>
+              <select id="a-industry" name="industry" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Select…</option>
+                <option>Hospitality — cafés / restaurants / QSR</option>
+                <option>Retail</option>
+                <option>Beauty, health &amp; wellness</option>
+                <option>Management / corporate</option>
+                <option>Trades &amp; services</option>
+                <option>Other</option>
+                <option>No direct industry experience</option>
+              </select>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <span class="text-sm font-semibold text-ink">Have you owned a business before? <span class="text-ochre">*</span></span>
+                <div class="mt-2 flex gap-4">
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="owned_business" value="yes" required class="text-ochre focus:ring-ochre" /> Yes</label>
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="owned_business" value="no" class="text-ochre focus:ring-ochre" /> No</label>
+                </div>
+              </div>
+              <div>
+                <span class="text-sm font-semibold text-ink">Have you managed a team? <span class="text-ochre">*</span></span>
+                <div class="mt-2 flex gap-4">
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="managed_team" value="yes" required class="text-ochre focus:ring-ochre" /> Yes</label>
+                  <label class="flex items-center gap-2 text-sm"><input type="radio" name="managed_team" value="no" class="text-ochre focus:ring-ochre" /> No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 04 FINANCIAL POSITION -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">04</span>
+            <span class="font-bold text-xl tracking-tightest">Financial position</span>
+          </legend>
+          <p class="mt-3 text-xs text-mute leading-relaxed">Indicative ranges only — no documents are required at this stage.</p>
+          <div class="mt-5 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-capital" class="text-sm font-semibold text-ink">Capital available to invest (AUD) <span class="text-ochre">*</span></label>
+                <select id="a-capital" name="capital" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Under $150k</option>
+                  <option>$150k – $300k</option>
+                  <option>$300k – $500k</option>
+                  <option>$500k – $1M</option>
+                  <option>$1M+</option>
+                  <option>Prefer to discuss</option>
+                </select>
+              </div>
+              <div>
+                <label for="a-funds" class="text-sm font-semibold text-ink">Primary source of funds <span class="text-ochre">*</span></label>
+                <select id="a-funds" name="funds_source" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Savings</option>
+                  <option>Home equity</option>
+                  <option>Family support</option>
+                  <option>Business sale proceeds</option>
+                  <option>Investment partners</option>
+                  <option>Combination</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-ink">Will you require finance? <span class="text-ochre">*</span></span>
+              <div class="mt-2 flex flex-wrap gap-4">
+                <label class="flex items-center gap-2 text-sm"><input type="radio" name="finance" value="no" required class="text-ochre focus:ring-ochre" /> No — fully funded</label>
+                <label class="flex items-center gap-2 text-sm"><input type="radio" name="finance" value="partial" class="text-ochre focus:ring-ochre" /> Partially</label>
+                <label class="flex items-center gap-2 text-sm"><input type="radio" name="finance" value="yes" class="text-ochre focus:ring-ochre" /> Yes — mostly financed</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 05 YOUR PLANS -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">05</span>
+            <span class="font-bold text-xl tracking-tightest">Your plans</span>
+          </legend>
+          <div class="mt-6 space-y-5">
+            <div>
+              <span class="text-sm font-semibold text-ink">How would you run it? <span class="text-ochre">*</span></span>
+              <div class="mt-2 space-y-2">
+                <label class="flex items-start gap-2 text-sm"><input type="radio" name="operating_model" value="owner-operator" required class="mt-0.5 text-ochre focus:ring-ochre" /> <span><strong>Owner-operator</strong> — I'll work in the business day to day</span></label>
+                <label class="flex items-start gap-2 text-sm"><input type="radio" name="operating_model" value="investor-manager" class="mt-0.5 text-ochre focus:ring-ochre" /> <span><strong>Investor</strong> — I'll employ a manager and oversee</span></label>
+                <label class="flex items-start gap-2 text-sm"><input type="radio" name="operating_model" value="undecided" class="mt-0.5 text-ochre focus:ring-ochre" /> <span>Undecided — open to advice</span></label>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="a-timeline" class="text-sm font-semibold text-ink">When do you want to start? <span class="text-ochre">*</span></label>
+                <select id="a-timeline" name="timeline" required class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                  <option value="">Select…</option>
+                  <option>Within 3 months</option>
+                  <option>3 – 6 months</option>
+                  <option>6 – 12 months</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+              <div>
+                <label for="a-partner" class="text-sm font-semibold text-ink">Co-applicant / business partner</label>
+                <input id="a-partner" name="partner" type="text" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm" placeholder="Name, or leave blank" />
+              </div>
+            </div>
+            <div>
+              <label for="a-why" class="text-sm font-semibold text-ink">Why this brand — and why you? <span class="text-ochre">*</span></label>
+              <textarea id="a-why" name="motivation" required rows="5" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent resize-none text-sm" placeholder="Your story, what drew you to this brand, what you'd bring as a franchisee…"></textarea>
+            </div>
+            <div>
+              <label for="a-source" class="text-sm font-semibold text-ink">How did you hear about this opportunity?</label>
+              <select id="a-source" name="source" class="mt-2 w-full bg-soft border border-line rounded-lg px-4 py-3 focus:ring-2 focus:ring-ochre focus:border-transparent text-sm">
+                <option value="">Optional…</option>
+                <option>Visited one of the venues</option>
+                <option>Google search</option>
+                <option>Instagram / social media</option>
+                <option>Referral from a friend</option>
+                <option>Referral from an existing franchisee</option>
+                <option>News / media</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 06 DECLARATIONS -->
+        <fieldset>
+          <legend class="flex items-baseline gap-3 pb-4 border-b border-line w-full">
+            <span class="font-bold text-ochre">06</span>
+            <span class="font-bold text-xl tracking-tightest">Declarations</span>
+          </legend>
+          <div class="mt-6 space-y-4">
+            <div class="flex items-start gap-3">
+              <input id="a-accurate" name="declaration_accurate" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+              <label for="a-accurate" class="text-xs text-ink2 leading-relaxed">I declare the information in this application is true and complete to the best of my knowledge. <span class="text-ochre">*</span></label>
+            </div>
+            <div class="flex items-start gap-3">
+              <input id="a-privacy" name="consent_privacy" type="checkbox" required class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+              <label for="a-privacy" class="text-xs text-ink2 leading-relaxed">I agree that ABC Franchise may collect and use my information to assess this application, and share it with the franchisor of the brand I apply for, in accordance with the <a href="#" class="underline hover:text-navy-700">Privacy Policy</a>. <span class="text-ochre">*</span></label>
+            </div>
+            <div class="flex items-start gap-3">
+              <input id="a-updates" name="consent_marketing" type="checkbox" class="mt-1 h-4 w-4 rounded border-line text-ochre focus:ring-ochre focus:ring-offset-0" />
+              <label for="a-updates" class="text-xs text-ink2 leading-relaxed">Keep me informed about other ABC Franchise opportunities by email. <span class="text-mute">(optional)</span></label>
+            </div>
+            <p class="text-xs text-mute leading-relaxed pt-2">Submitting this application is not an offer, and does not commit you or the franchisor to anything. Any grant of a franchise follows the disclosure and cooling-off process required by the Franchising Code of Conduct.</p>
+          </div>
+        </fieldset>
+
+        <!-- SUBMIT -->
+        <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+          <button type="submit" class="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-lg bg-navy-900 text-paper font-semibold hover:bg-navy-800 transition-colors">
+            Submit Application
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="text-xs text-mute">Questions first? Email <a href="mailto:admin@abcfranchise.com.au" class="underline hover:text-navy-700">admin@abcfranchise.com.au</a> or call <a href="tel:+61430597588" class="underline hover:text-navy-700">+61 430 597 588</a>.</p>
+        </div>
+
+      </form>
+
+      <!--
+        TO GO LIVE WITH HUBSPOT / CRM:
+        Replace the onsubmit handler with a fetch() POST to your HubSpot form endpoint,
+        or swap the whole <form> for the HubSpot embed code.
+        The ?brand= and ?state= query params are read by the script below —
+        keep the same select IDs (a-brand, a-state) if you re-embed.
+      -->
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-navy-950 text-navy-200">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-14">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div>
+        <p class="font-bold text-xl text-paper">ABC FRANCHISE</p>
+        <p class="mt-3 text-sm leading-relaxed">Australia's franchise incubation specialists.</p>
+      </div>
+      <div>
+        <p class="font-bold text-paper text-sm">Franchise opportunities</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="lumina-cafe.html" class="hover:text-paper">Lumina Cafe</a></li>
+          <li><a href="vitaland-kids-cafe.html" class="hover:text-paper">Vitaland Kids Cafe</a></li>
+          <li><a href="bengong-tea.html" class="hover:text-paper">Bengong's Tea</a></li>
+          <li><a href="ningji.html" class="hover:text-paper">NingJi 柠季</a></li>
+          <li><a href="uncle-joes.html" class="hover:text-paper">Uncle Joe's</a></li>
+          <li><a href="lermont.html" class="hover:text-paper">Lermont</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-paper text-sm">The Firm</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="../about.html" class="hover:text-paper">About</a></li>
+          <li><a href="../case-studies/index.html" class="hover:text-paper">Case studies</a></li>
+          <li><a href="../contact.html" class="hover:text-paper">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-paper text-sm">Contact</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="tel:+61430597588" class="hover:text-paper">+61 430 597 588</a></li>
+          <li><a href="mailto:admin@abcfranchise.com.au" class="hover:text-paper">admin@abcfranchise.com.au</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-white/10 text-xs">© 2026 ABC Franchise Pty Ltd · Member, Franchise Council of Australia</div>
+  </div>
+</footer>
+
+<script>
+  // Preselect brand/state from query string, e.g. apply.html?brand=lumina-cafe&state=NSW
+  const params = new URLSearchParams(location.search);
+  const brand = params.get('brand');
+  const state = params.get('state');
+  if (brand) {
+    const sel = document.getElementById('a-brand');
+    if ([...sel.options].some(o => o.value === brand)) sel.value = brand;
+  }
+  if (state) {
+    const sel = document.getElementById('a-state');
+    if ([...sel.options].some(o => o.text === state)) sel.value = state;
+  }
+</script>
+</body>
+</html>
